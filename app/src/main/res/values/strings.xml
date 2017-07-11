@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">TilesNew</string>
+
+
+
+    <string-array name="buildings">
+        <item>Building 1</item>
+        <item>Building 50</item>
+        <item>Building 15</item>
+    </string-array>
+
+    <!-- =================================== Map ===================================================== -->
+    <string name="from_hint">From<b></b></string>
+    <string name="to_hint">To<b></b></string>
+    <string name="poi_detail_location">Location</string>
+    <string name="poi_detail_description">Description</string>
+    <string name="poi_detail_contact">Contact</string>
+
+    <string name="invalid_input">Please input correct name!</string>
+    <string name="poi_current_location">Current Location</string>
+    <string name="compass_calibration"><b>Compass interference</b>\nMove away from the interference, or re-calibrate by waving your device in a figure 8 motion.</string>
+
+    <!-- =================================== QR code ================================================== -->
+    <string name="scan_qrcode">Scan a nearby QR code to determine your starting point</string>
+    <string name="launch_camera_failed">Failed to launch the camera, please try again later!</string>
+    <string name="open_system_permissions">Please open the system permissions!</string>
+    <string name="invalid_address">Invalid address:</string>
+    <string name="qrcode_error">QR Code Error, please try again!</string>
+
+
 </resources>
