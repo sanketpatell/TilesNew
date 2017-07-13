@@ -1,0 +1,29 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 23
+        versionCode 38
+        versionName "2.2.7"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+}
+
+apply from: 'aar-release.gradle'
