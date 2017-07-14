@@ -15,6 +15,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.sanky.tilesnew.R;
+import com.sanky.tilesnew.adapter.Suggest;
 import com.sanky.tilesnew.tiles.TileViewActivity;
 import com.qozix.tileview.TileView;
 import com.qozix.tileview.markers.MarkerLayout;
@@ -37,6 +38,8 @@ public class Tile_map_navigation extends TileViewActivity {
 
 
     Intent intent;
+    private Suggest from;
+    private Suggest to;
 
     private static final String FROM_POI = "fromPoi";
     private static final String TO_POI = "toPoi";
@@ -131,7 +134,7 @@ public class Tile_map_navigation extends TileViewActivity {
     }
 
     private MarkerLayout.MarkerTapListener mMarkerTapListener = new MarkerLayout.MarkerTapListener() {
-        @Override
+        @Override=
         public void onMarkerTap( View v, int x, int y ) {
             Toast.makeText( getApplicationContext(), "You tapped a pin", Toast.LENGTH_LONG ).show();
         }
@@ -154,10 +157,10 @@ public class Tile_map_navigation extends TileViewActivity {
             editTo.setText(to.getTitle());
         }
 
-        final boolean compassAllowed = (maps != null && maps.getCount() == 1);//true
+       /* final boolean compassAllowed = (maps != null && maps.getCount() == 1);//true
         mapFragment.setCompassEnabled(isCompassSupported && compassAllowed && compassToggle.isChecked());
         compassToggle.setVisibility(isCompassSupported && compassAllowed ? View.VISIBLE : View.GONE);
-
+*/
         long fromId = intent.getLongExtra(FROM_POI_ID, 0);
         if (fromId > 0) {
             long toId = intent.getLongExtra(TO_POI_ID, 0);
